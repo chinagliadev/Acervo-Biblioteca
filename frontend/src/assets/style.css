@@ -234,6 +234,8 @@ ul {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+
+
 .info-cliente h6 {
     margin: 0;
     font-size: 13px;
@@ -355,7 +357,7 @@ hr {
 
 @media (max-width: 768px) {
 
-    
+
     html,
     body {
         height: auto;
@@ -397,7 +399,7 @@ hr {
     }
 }
 
-#formLivro{
+#formLivro {
     width: 100%;
 }
 
@@ -479,7 +481,7 @@ hr {
     border-radius: 50%;
 }
 
-.home-livro{
+.home-livro {
     flex: 1;
     min-height: 0;
     display: flex;
@@ -487,4 +489,145 @@ hr {
     gap: 8px;
     padding: 8px 24px 16px;
     overflow: hidden;
+}
+
+.card-dashboard {
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    min-height: 145px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+.card-dashboard.card-dashboard-background {
+    background-color: var(--color-acervo);
+}
+
+.card-dashboard h2{
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+}
+
+.card-dashboard p{
+    font-size: 72px;
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+}
+
+.menu{
+    display: flex;
+    gap: 8px;
+}
+
+.menu-tabela{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap; 
+    gap: 8px; 
+}
+
+.menu-container-pesquisar{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.lista-menu-tabela{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    background-color: var(--color-acervo);
+    padding: 12px 4px;
+    border-radius: 16px;
+}
+
+.lista-menu-tabela a{
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    border-radius: 16px;
+    color: rgb(0, 0, 0);
+    transition: .2s;
+}
+
+.lista-menu-tabela a.item-active-menu-tabela{
+    background-color: black;
+    color: white;
+}
+
+.lista-menu-tabela a:hover{
+    color: #BDBDBD;
+}
+
+.button-acervo-black-menu{
+    padding: 8px;
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 50px;
+}
+
+.button-acervo-cadastrar{
+    padding: 8px;
+    width: 100%;
+    border: none;
+    background-color: var(--color-acervo);
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 50px;
+}
+
+.button-acervo-cadastrar:hover{
+    background-color: var(--color-acervo-hover);
+    transition: background-color 0.3s ease;
+}
+
+.button-acervo-black-menu:hover{
+    background-color: rgb(36, 36, 36);
+}
+
+.container-pesquisar-botao{
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .menu-tabela {
+        flex-direction: column;
+        align-items: stretch;   /* estica os filhos pra largura total */
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .lista-menu-tabela {
+        flex: 1;                /* a lista cresce pra preencher o espaço */
+        justify-content: center;
+    }
+
+    .menu-container-pesquisar {
+        max-width: 100%;        /* remove o limite de 400px */
+        width: 100%;
+    }
+}
+
+
+.modal-title{
+    font-size: 32px;
+    font-family: 'SpecialGothicExpandedOne';
 }

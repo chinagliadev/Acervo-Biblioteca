@@ -60,3 +60,10 @@ document.getElementById('formAutor').addEventListener('submit', function (e) {
     };
 
 });
+
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })
