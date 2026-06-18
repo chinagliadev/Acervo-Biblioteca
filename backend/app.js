@@ -4,6 +4,7 @@ const session = require('express-session');
 const cors = require('cors');
 const db = require('./database/config');
 const authRoutes = require('./routes/auth');
+const combosRoutes = require('./routes/combo')
 
 const app = express();
 
@@ -25,7 +26,10 @@ app.use(session({
 }));
 
 app.use('/auth', authRoutes);
+app.use('/combos', combosRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Rodando na porta ${process.env.PORT}`);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Rodando na porta ${PORT}`);
 });
