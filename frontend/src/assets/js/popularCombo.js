@@ -29,6 +29,19 @@ async function buscarDadosCombo(tipo)
                 return resposta.dados;
             }
 
+            case COMBO_TIPO.GENEROS:
+            {
+                const response = await fetch('http://localhost:3000/combos/selectGenero');
+
+                if (!response.ok)
+                {
+                    throw new Error("Erro ao buscar países");
+                }
+
+                const resposta = await response.json();
+                return resposta.dados;
+            }
+
             default:
                 throw new Error(`Tipo de combo não tratado: ${tipo}`);
         }
@@ -76,4 +89,41 @@ async function popularComboPaises()
     }
 }
 
+async function popularComboGenero() 
+{
+    try 
+    {
+        const dadosGenero = await buscarDadosCombo(COMBO_TIPO.GENEROS);
+
+        if (!dadosGenero)
+        {
+            console.error('Não foi possível carregar os países');
+            return;
+        }
+
+        const selectPaises = document.getElementById('selGeneroLiterario');
+
+        if (!selectPaises)
+        {
+            console.error('Elemento select de países não encontrado');
+            return;
+        }
+
+        dadosGenero.forEach(genero => {
+            const option = document.createElement('option');
+            option.value = genero.pk_genero;
+            option.text = genero.ds_genero;
+
+
+            selectPaises.appendChild(option);
+        });
+     
+    }
+    catch (error) 
+    {
+        console.error(error);
+    }
+}
+
 popularComboPaises();
+popularComboGenero();
