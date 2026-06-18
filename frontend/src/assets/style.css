@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/frontend/fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'SpecialGothicExpandedOne';
+    src: url('/frontend/fonts/SpecialGothicExpandedOne-Regular.ttf');
+}
+
+:root {
+    --background-body: #F8F8FF;
+    --background-capa-login: #00462e;
+    --color-acervo: #BCFB86;
+    --color-acervo-hover: #91ee3f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-body);
+}
+
+h5 {
+    margin: 0;
+}
+
+
+.header-acervo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    flex-shrink: 0;
+}
+
+.header-logo {
+    font-family: 'SpecialGothicExpandedOne';
+    font-size: 18px;
+    margin: 0;
+    border: 1px solid #BDBDBD;
+    padding: 6px 24px;
+    border-radius: 32px;
+}
+
+.header-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header-lista {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 8px 16px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header-lista .item-ativado {
+    background-color: var(--color-acervo);
+    border-radius: 16px;
+    padding: 6px 10px;
+}
+
+.header-lista a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+.header-lista a:hover {
+    color: var(--color-acervo-hover);
+    transition: color 0.25s ease;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-menu li {
+    background-color: var(--color-acervo);
+    padding: 8px 14px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    transition: background-color 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header-menu li:hover {
+    background-color: var(--color-acervo-hover);
+}
+
+
+.home {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 24px 16px;
+    overflow: hidden;
+}
+
+.home h2 {
+    color: black;
+    font-size: 56px;
+    margin: 0;
+}
+
+.home span {
+    font-weight: bold;
+}
+
+.home>.mt-3,
+.home>.mt-2 {
+    flex: 1;
+    min-height: 0;
+    margin-top: 0 !important;
+}
+
+.home .row {
+    height: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    flex-shrink: 0;
+}
+
+.card-header h5 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card-header a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.card-header a:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.card-body {
+    padding: 0px 12px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.card-acervo .lista-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-info {
+    margin-bottom: 8px;
+}
+
+.icon-info {
+    background-color: var(--color-acervo);
+    padding: 6px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.bagde {
+    background-color: black;
+    padding: 6px 10px;
+    border-radius: 16px;
+    color: white;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.card-acervo {
+    background-color: white;
+    padding: 8px;
+    border-radius: 16px;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.info-cliente h6 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.info-cliente span {
+    font-size: 11px;
+    font-weight: 400;
+    color: #868686;
+}
+
+.estatistica_emprestimo {
+    background-color: var(--color-acervo);
+    border-radius: 16px;
+    height: 100%;
+    padding: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.estatistica_emprestimo h5 {
+    font-size: 56px;
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+}
+
+.estatistica_emprestimo a {
+    font-size: 18px;
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.estatistica_emprestimo .estatistica-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    flex-shrink: 0;
+}
+
+.estatistica_emprestimo .estatistica_emprestimo-body {
+    padding: 0px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.estatistica_emprestimo .estatistica_emprestimo-body h5 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.tabela-acervo {
+    font-size: 12px;
+}
+
+.tabela-acervo th,
+.tabela-acervo td {
+    padding: 4px 8px;
+}
+
+.estatistica_emprestimo-total {
+    background-color: var(--color-acervo);
+    border-radius: 16px;
+    padding: 10px 12px;
+    width: 100%;
+    height: 100%;
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estatistica-header-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estatistica-body-total {
+    padding: 4px 0;
+}
+
+.estatistica_emprestimo-total h5 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.estatistica_emprestimo-total h3 {
+    font-size: 48px;
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    margin: 4px 0;
+}
+
+
+
+@media (max-width: 992px) {
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .header-lista {
+        gap: 24px;
+    }
+
+    .estatistica_emprestimo .estatistica_emprestimo-body h5,
+    .estatistica_emprestimo-total h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+    html,
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    body {
+        height: auto;
+    }
+
+    .home {
+        overflow: visible;
+        padding: 8px 16px 16px;
+    }
+
+    .home>.mt-3,
+    .home>.mt-2 {
+        flex: none;
+    }
+
+    .card-acervo {
+        height: auto;
+        min-height: 220px;
+    }
+
+    .header-acervo {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 16px;
+    }
+
+    .header-lista {
+        gap: 12px;
+        padding: 6px 10px;
+    }
+
+    .header-lista a {
+        font-size: 12px;
+    }
+}
+
+#formLivro{
+    width: 100%;
+}
+
+.livro-menu {
+    background-color: var(--background-login);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.livro-menu h2 {
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+    font-size: 32px;
+}
+
+.item-menu-livros {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.livro-item {
+    display: flex;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px 4px 12px;
+    border-radius: 32px;
+    color: white;
+}
+
+.livro-item p {
+    margin: 0;
+}
+
+.livro-item button {
+    border: none;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.livro-menu {
+    background-color: var(--background-login);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.livro-menu h2 {
+    font-family: 'SpecialGothicExpandedOne', sans-serif;
+    font-size: 32px;
+}
+
+.item-menu-livros {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.livro-item {
+    display: flex;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px 4px 12px;
+    border-radius: 32px;
+    color: white;
+}
+
+.livro-item p {
+    margin: 0;
+}
+
+.livro-item button {
+    border: none;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.home-livro{
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 24px 16px;
+    overflow: hidden;
+}

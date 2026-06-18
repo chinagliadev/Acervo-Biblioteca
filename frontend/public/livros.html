@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Biblioteca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/assets/style.css">
+    <link rel="stylesheet" href="../src/assets/login.css">
+</head>
+
+<body>
+
+    <header class="header-acervo">
+        <h2 class="header-logo">ACERVO</h2>
+
+        <nav class="header-navegacao">
+            <ul class="header-lista">
+                <li>
+                    <a class="item-ativado" href="#">Home</a>
+                </li>
+                <li> <a href="./livros.html">Livro</a></li>
+                <li> <a href="#">Cliente</a></li>
+                <li> <a href="#">Empréstimo</a></li>
+            </ul>
+            <ul class="header-menu">
+                <li> <a href="#"><i class="bi bi-search"></i></a></li>
+                <li> <a href="#"><i class="bi bi-person"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-livro">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <section class="livro-menu">
+                    <h2>Livro</h2>
+
+                    <p></p>
+                </section>
+            </div>
+            <div class="col-12 col-sm-9">
+                <section id="container-form-livro" class="card-acervo">
+
+                    <form id="formLivro" novalidate>
+
+                        <div class="row">
+                            <div class="col-12 col-1">
+                                <label for="txtTitulo" class="form-label">Título <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="formulario_input" id="txtTitulo" name="titulo" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Informe o título do livro.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtIsbn" class="form-label">ISBN <span class="text-danger">*</span></label>
+                                <input type="text" class="formulario_input" id="txtIsbn" name="isbn"
+                                    pattern="^(97[89]\d{10}|\d{9}[\dX])$" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Informe um ISBN válido.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtAnoPublicacao" class="form-label">Ano de publicação <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" class="formulario_input" id="txtAnoPublicacao" name="anoPublicacao"
+                                    min="1000" max="2099" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Informe um ano entre 1000 e 2099.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtEditora" class="form-label">Editora <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="formulario_input" id="txtEditora" name="editora" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Informe a editora.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtEdicao" class="form-label">Edição</label>
+                                <input type="number" class="formulario_input" id="txtEdicao" name="edicao" min="1">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Edição deve ser maior que 0.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtNumeroPagina" class="form-label">Número de páginas</label>
+                                <input type="number" class="formulario_input" id="txtNumeroPagina" name="numeroPaginas"
+                                    min="1">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Informe um número de páginas válido.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="selIdioma" class="form-label">Idioma <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="selIdioma" name="idioma" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="portugues">Português</option>
+                                    <option value="ingles">Inglês</option>
+                                    <option value="espanhol">Espanhol</option>
+                                    <option value="frances">Francês</option>
+                                    <option value="alemao">Alemão</option>
+                                    <option value="japones">Japonês</option>
+                                </select>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Selecione o idioma.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="selGenero" class="form-label">Gênero <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="selGenero" name="genero" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="ficcao">Ficção</option>
+                                    <option value="romance">Romance</option>
+                                    <option value="terror">Terror / Suspense</option>
+                                    <option value="fantasia">Fantasia / Ficção Científica</option>
+                                    <option value="biografia">Biografia</option>
+                                    <option value="historia">História</option>
+                                    <option value="autoajuda">Autoajuda</option>
+                                    <option value="didatico">Didático / Técnico</option>
+                                    <option value="infantil">Infantil / Juvenil</option>
+                                    <option value="hq">HQ / Mangá</option>
+                                </select>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Selecione o gênero.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <label for="txtArquivo" class="form-label">Capa do livro</label>
+                                <input type="file" class="formulario_input" id="txtArquivo" name="arquivo"
+                                    accept=".jpg,.jpeg,.png,.gif,.webp">
+                                <div class="invalid-feedback">Selecione uma imagem válida.</div>
+                            </div>
+                        </div>
+
+
+
+                        <hr>
+
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle-fill"></i> Para seguir para o próximo cadastro informe
+                            todos os campos acima com <span class="text-danger">*</span>.
+                        </div>
+
+                        <div class="text-start">
+                            <button id="btnProximoFormulario" type="button" class="btn btn-success">
+                                Próxima Etapa <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- <section id="container_formulario_autor" class="bg-white mt-2 border mb-3 shadow-sm rounded-3 p-1 disabled">
+        <div class="p-2 bg-success d-flex align-items-center gap-3 justify-content-between rounded-3"
+            style="max-height: 45px;">
+            <div class="d-flex align-items-center gap-3">
+                <div class="icone d-flex align-items-center justify-content-center rounded-3">
+                    <i class="bi bi-feather text-white fs-5 bg-success rounded-3"></i>
+                </div>
+                <div class="text-white">
+                    <h3 class="fw-bold mb-0 display-6" style="font-size: 1.2rem;">Autor</h3>
+                </div>
+            </div>
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#autorColapsar"
+                aria-expanded="true" aria-controls="autorColapsar">
+                <i class="bi bi-caret-down-fill"></i>
+            </button>
+        </div>
+
+        <div class="collapse show" id="autorColapsar">
+            <div class="p-2">
+                <div class="row g-4 mt-2">
+
+                    <div
+                        class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-start gap-2 d-none d-md-block">
+                        <img id="imgAutor" src="../src/assets/img/Man reading-bro.png" alt="Foto do autor"
+                            class="object-fit-cover w-100" style="max-height: 500px; width: auto;">
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <form id="formAutor" novalidate>
+                            <h2 class="display-6 fw-bold" style="font-size: 1.4rem;">Dados do Autor</h2>
+                            <h3 class="display-6 text-muted" style="font-size: 1rem;">Informe os dados do autor</h3>
+                            <div class="row g-3 mt-1">
+                                <div class="col-12">
+                                    <label for="txtNomeAutor" class="form-label">Nome <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="txtNomeAutor" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Informe o nome do autor.</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="txtPseudonimoAutor" class="form-label">Pseudônimo</label>
+                                    <input type="text" class="form-control" id="txtPseudonimoAutor">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="txtDataNascimento" class="form-label">Data de nascimento</label>
+                                    <input type="date" class="form-control" id="txtDataNascimento" max="">
+                                    <div class="invalid-feedback">Informe uma data válida.</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="selPaisAutor" class="form-label">País <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="selPaisAutor" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="br">🇧🇷 Brasil</option>
+                                        <option value="us">🇺🇸 Estados Unidos</option>
+                                        <option value="gb">🇬🇧 Reino Unido</option>
+                                        <option value="fr">🇫🇷 França</option>
+                                        <option value="de">🇩🇪 Alemanha</option>
+                                        <option value="es">🇪🇸 Espanha</option>
+                                        <option value="pt">🇵🇹 Portugal</option>
+                                        <option value="it">🇮🇹 Itália</option>
+                                        <option value="jp">🇯🇵 Japão</option>
+                                        <option value="ru">🇷🇺 Rússia</option>
+                                        <option value="ar">🇦🇷 Argentina</option>
+                                        <option value="mx">🇲🇽 México</option>
+                                        <option value="cn">🇨🇳 China</option>
+                                    </select>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Selecione o país.</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="selGeneroLiterario" class="form-label">Gênero literário <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="selGeneroLiterario" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="ficcao">Ficção</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="terror">Terror / Suspense</option>
+                                        <option value="fantasia">Fantasia / Ficção Científica</option>
+                                        <option value="biografia">Biografia</option>
+                                        <option value="historia">História</option>
+                                        <option value="autoajuda">Autoajuda</option>
+                                        <option value="didatico">Didático / Técnico</option>
+                                        <option value="infantil">Infantil / Juvenil</option>
+                                        <option value="hq">HQ / Mangá</option>
+                                    </select>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Selecione o gênero literário.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="txtBiografia" class="form-label">Biografia</label>
+                                    <textarea class="form-control" id="txtBiografia" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="text-end d-flex gap-2 justify-content-end">
+                                <button type="button" class="btn btn-secondary">Cancelar</button>
+                                <button type="submit" class="btn btn-success">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../src/assets/js/home.js"></script>
+
+    <script src="../src/assets/js/livros.js"></script>
+
+</body>
+
+</html>
