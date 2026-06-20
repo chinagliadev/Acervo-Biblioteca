@@ -75,8 +75,8 @@ async function popularComboPaises()
 
         dadosPaises.forEach(pais => {
             const option = document.createElement('option');
-            option.value = pais.sigla;
-            option.text = pais.pais;
+            option.value = pais.pk_pais;
+            option.text = pais.ds_pais;
 
 
             selectPaises.appendChild(option);

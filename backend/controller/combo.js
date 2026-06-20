@@ -4,7 +4,7 @@ exports.getPaises =  async(req, res) =>
     {
         try {
             
-            const comandoSQL = 'SELECT sg_pais AS sigla, ds_pais AS pais FROM pais;';
+            const comandoSQL = 'SELECT * FROM pais;';
 
             const resultado = await conexao.query(comandoSQL);
 

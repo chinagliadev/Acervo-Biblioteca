@@ -607,7 +607,7 @@ hr {
 @media (max-width: 768px) {
     .menu-tabela {
         flex-direction: column;
-        align-items: stretch;   /* estica os filhos pra largura total */
+        align-items: stretch;  
     }
 
     .menu {
@@ -616,18 +616,55 @@ hr {
     }
 
     .lista-menu-tabela {
-        flex: 1;                /* a lista cresce pra preencher o espaço */
+        flex: 1;                
         justify-content: center;
     }
 
     .menu-container-pesquisar {
-        max-width: 100%;        /* remove o limite de 400px */
+        max-width: 100%;     
         width: 100%;
     }
 }
 
-
-.modal-title{
-    font-size: 32px;
+#mensagem{
     font-family: 'SpecialGothicExpandedOne';
+    font-size: 16px;
+    padding: 24px;
+}
+
+.modal-header h5
+{
+    font-family: 'SpecialGothicExpandedOne';
+}
+
+.tabela-scroll {
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.hero-table{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.bagde-ativo{
+    background-color: var(--color-acervo);
+    padding: 4px;
+    border-radius: 32px;
+    font-weight: bold;
+    color: #2e6300;
+}
+
+.bagde-removido{
+    background-color: rgb(241, 120, 120);
+    padding: 4px;
+    border-radius: 32px;
+    font-weight: bold;
+    color: rgb(121, 3, 3);
+}
+
+.acoes-tabela {
+    display: flex;
+    gap: 8px;
 }

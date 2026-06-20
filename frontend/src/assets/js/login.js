@@ -98,7 +98,6 @@ function cadastrarUsuario() {
 }
 
 function login() {
-  console.log('Clicou');
   const usuario = {
     email: email.value,
     senha: senha.value,

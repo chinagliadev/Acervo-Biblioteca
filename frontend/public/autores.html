@@ -36,6 +36,37 @@
 
     <main class="home-livro">
 
+        <div class="row g-2">
+            <div class="col-12 col-sm-3">
+                <section class="card-dashboard card-dashboard-background">
+                    <h2>Livro</h2>
+
+                    <p>10</p>
+                </section>
+            </div>
+            <div class="col-12 col-sm-3">
+                <section class="card-dashboard">
+                    <h2>Livro</h2>
+
+                    <p>10</p>
+                </section>
+            </div>
+            <div class="col-12 col-sm-3">
+                <section class="card-dashboard">
+                    <h2>Livro</h2>
+
+                    <p>10</p>
+                </section>
+            </div>
+            <div class="col-12 col-sm-3">
+                <section class="card-dashboard">
+                    <h2>Gêneros mais vistos</h2>
+
+                    <p>10</p>
+                </section>
+            </div>
+        </div>
+
         <div class="menu-tabela">
 
             <div class="menu">
@@ -48,132 +79,43 @@
             </div>
 
             <div class="menu-container-pesquisar">
-                <input type="text" class="formulario_input" placeholder="Pesquisar autores, pseudônimos ou países...">
+                <form>
+                    <div class="d-flex align-items-start">
+                        <div class="me-2">
+                            <input type="text" class="formulario_input"
+                                placeholder="J. K. Rowling, George Orwell, Monteiro Lobato..." required>
+                            <div class="invalid-feedback">Informe um item corretamente</div>
+                        </div>
 
-                <div class="container-pesquisar-botao">
-                    <button class="button-acervo-cadastrar"><i class="bi bi-search"></i></button>
-                    <button class="button-acervo-cadastrar" data-bs-toggle="modal"
-                        data-bs-target="#modalCadastroAutor"><i class="bi bi-plus"></i></button>
-                </div>
+                        <div class="container-pesquisar-botao">
+                            <button type="submit" class="button-acervo-cadastrar"><i class="bi bi-search"></i></button>
+                            <button class="button-acervo-cadastrar" data-bs-toggle="modal"
+                                data-bs-target="#modalCadastroAutor"><i class="bi bi-plus"></i></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <section class="card-acervo">
-            <table class="table table-acervo table-hover align-middle mb-0">
-                <thead>
-                    <tr>
-                        <th style="width: 54px;">Foto</th>
-                        <th style="min-width: 180px;">Nome / Pseudônimo</th>
-                        <th style="min-width: 130px;">País</th>
-                        <th style="min-width: 120px;">Gênero literário</th>
-                        <th style="min-width: 110px;">Nascimento</th>
-                        <th style="width: 60px;"></th>
-                    </tr>
-                </thead>
-                <tbody>
+        <section class="hero-table">
+            <div class="tabela-scroll">
+                <table class="table table-acervo table-hover">
+                    <thead>
+                        <tr>
+                            <th style="min-width: 180px;">Nome / Pseudônimo</th>
+                            <th style="min-width: 130px;">País</th>
+                            <th style="min-width: 120px;">Gênero literário</th>
+                            <th style="min-width: 110px;">Nascimento</th>
+                            <th style="min-width: 100px;">Status</th>
+                            <th style="width: 60px;">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo_tabela_autor">
 
-                    <tr>
-                        <td>
-                            <div class="capa-placeholder">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="titulo-livro">Machado de Assis</span>
-                            <span class="isbn-livro">—</span>
-                        </td>
-                        <td>🇧🇷 Brasil</td>
-                        <td><span class="badge-genero">Romance</span></td>
-                        <td>21/06/1839</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-secondary border-0" title="Ver detalhes">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                    <tr>
-                        <td>
-                            <div class="capa-placeholder">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="titulo-livro">J.R.R. Tolkien</span>
-                            <span class="isbn-livro">—</span>
-                        </td>
-                        <td>🇬🇧 Reino Unido</td>
-                        <td><span class="badge-genero">Fantasia</span></td>
-                        <td>03/01/1892</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-secondary border-0" title="Ver detalhes">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="capa-placeholder">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="titulo-livro">Stephen King</span>
-                            <span class="isbn-livro">Richard Bachman</span>
-                        </td>
-                        <td>🇺🇸 Estados Unidos</td>
-                        <td><span class="badge-genero">Terror</span></td>
-                        <td>21/09/1947</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-secondary border-0" title="Ver detalhes">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="capa-placeholder">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="titulo-livro">Isaac Asimov</span>
-                            <span class="isbn-livro">—</span>
-                        </td>
-                        <td>🇺🇸 Estados Unidos</td>
-                        <td><span class="badge-genero">Ficção Científica</span></td>
-                        <td>02/01/1920</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-secondary border-0" title="Ver detalhes">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="capa-placeholder">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="titulo-livro">Robert C. Martin</span>
-                            <span class="isbn-livro">Uncle Bob</span>
-                        </td>
-                        <td>🇺🇸 Estados Unidos</td>
-                        <td><span class="badge-genero">Didático</span></td>
-                        <td>—</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-secondary border-0" title="Ver detalhes">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
         </section>
 
     </main>
@@ -186,49 +128,87 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formAutor" novalidate>
+                    <form id="formAutor" class="needs-validation" novalidate>
                         <div class="row">
 
                             <div class="col-12 mb-3">
-                                <label for="txtNomeAutor" class="form-label">Nome <span class="text-danger">*</span></label>
-                                <input type="text" class="formulario_input" id="txtNomeAutor" name="nome" required>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Informe o nome do autor.</div>
+                                <label for="txtNomeAutor" class="form-label">Nome <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="formulario_input" id="txtNomeAutor" name="nome" required
+                                    autocomplete="off">
+                                <div class="valid-feedback">Nome do autor informado</div>
+                                <div class="invalid-feedback">Informe o nome do autor</div>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label for="txtPseudonimoAutor" class="form-label">Pseudônimo</label>
-                                <input type="text" class="formulario_input" id="txtPseudonimoAutor" name="pseudonimo">
+                                <input type="text" class="formulario_input" id="txtPseudonimoAutor" name="pseudonimo"
+                                    required autocomplete="off">
+                                <div class="valid-feedback">Nome do pseudônimo informado</div>
+                                <div class="invalid-feedback">Informe o pseudônimo do autor</div>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label for="txtDataNascimento" class="form-label">Data de nascimento</label>
-                                <input type="date" class="formulario_input" id="txtDataNascimento" name="dataNascimento">
-                                <div class="invalid-feedback">Informe uma data válida.</div>
+                                <input type="date" class="formulario_input" id="txtDataNascimento" name="dataNascimento"
+                                    required autocomplete="off">
+                                <div class="invalid-feedback">Informe uma data válida</div>
+                                <div class="valid-feedback">Data informada com sucesso</div>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
-                                <label for="selPaisAutor" class="form-label">País <span class="text-danger">*</span></label>
+                                <label for="selPaisAutor" class="form-label">País <span
+                                        class="text-danger">*</span></label>
                                 <select class="formulario_input" id="selPaisAutor" name="pais" required>
                                     <option value="">Selecione...</option>
                                 </select>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Selecione o país.</div>
+                                <div class="valid-feedback">Pais selecionado</div>
+                                <div class="invalid-feedback">Selecione o país</div>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
-                                <label for="selGeneroLiterario" class="form-label">Gênero literário <span class="text-danger">*</span></label>
-                                <select class="formulario_input" id="selGeneroLiterario" name="generoLiterario" required>
+                                <label for="selGeneroLiterario" class="form-label">Gênero literário <span
+                                        class="text-danger">*</span></label>
+                                <select class="formulario_input" id="selGeneroLiterario" name="generoLiterario"
+                                    required>
                                     <option value="">Selecione...</option>
                                 </select>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Selecione o gênero literário.</div>
+                                <div class="valid-feedback">Gênero selecionado</div>
+                                <div class="invalid-feedback">Selecione o gênero literário</div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="btnSalvarAutor" class="button-acervo">Salvar</button>
+                    <button type="submit" id="btnSalvarAutor" class="button-acervo">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body text-center" id="mensagem">
+                Autor criado com sucesso
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modalRemoverAutor">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Remover autor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja remover o autor <strong id="nomeAutorRemover"></strong>? Essa ação não
+                        pode ser desfeita.</p>
+                </div>
+                <div class="modal-footer d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btnConfirmarRemocao" class="button-acervo-remover">Remover</button>
                 </div>
             </div>
         </div>
@@ -237,7 +217,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../src/assets/js/autores.js"></script>
     <script src="../src/assets/js/popularCombo.js"></script>
+    <script src="../src/assets/js/validation.js"></script>
+
 
 </body>
 

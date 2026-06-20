@@ -5,6 +5,7 @@ const cors = require('cors');
 const db = require('./database/config');
 const authRoutes = require('./routes/auth');
 const combosRoutes = require('./routes/combo')
+const autorRoutes = require('./routes/autor');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(session({
 
 app.use('/auth', authRoutes);
 app.use('/combos', combosRoutes);
+app.use('/autor', autorRoutes);
 
 const PORT = process.env.PORT || 3000;
 
